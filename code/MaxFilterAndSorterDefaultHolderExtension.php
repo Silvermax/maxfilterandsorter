@@ -8,15 +8,15 @@
 
 class MaxFilterAndSorterDefaultHolderExtension extends Extension {
 	
+	function getMaxFilterAndSorterDataList() {
+		return $this->owner->Children();
+	}
+	
 	/*
 	 * Filter
 	*/
 	function getMaxFilterField() {
 		return "ClassName";
-	}
-		
-	function getMaxFilterData() {
-		return $this->owner->Children();
 	}
 	
 	function getMaxFilterFilterId($value) {
@@ -28,7 +28,7 @@ class MaxFilterAndSorterDefaultHolderExtension extends Extension {
 	}
 	
 	function getMaxFilter() {
-		$items = $this->owner->getMaxFilterData();
+		$items = $this->owner->getMaxFilterAndSorterDataList();
 		if ($items->exists()) {
 			$map = array_keys($items->map($this->owner->getMaxFilterField()));
 			

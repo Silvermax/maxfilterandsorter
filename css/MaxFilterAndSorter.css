@@ -1,0 +1,14 @@
+#ChildrenList {margin-top: 1em}
+.ChildrenItem {width: 33%; float: left}
+.ChildrenItemContent {border: 1px solid #ddd; background: #fff; padding: 1em .75em 1em .75em; margin: 10px; height: 200px}
+.ChildrenItem p {margin-bottom: 0}
+
+.MaxFilterAndSorterDataList {display: table; width: 100%; background: #efefef}
+
+.MaxFilterAndSorterButtonsWrapper {display:table; width:100%; margin-bottom: 1em}
+.MaxFilterAndSorterButtons {width: 50%; float:left; line-height: 2em}
+.MaxFilterAndSorterButtons a {background: #ddd; color: #333; padding: 5px; border-radius: 3px; border: 1px solid#bbb; text-decoration: none}
+.MaxFilterAndSorterButtons a:hover,  .MaxFilterAndSorterButtons a:focus, .MaxFilterAndSorterButtons a:active  {background: #bbb; color: #000}
+.MaxFilterAndSorterButtons a.active {background: #333; color: #fff}
+#MaxSorter {text-align: right}
+
