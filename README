@@ -1,0 +1,3 @@
+Filter and Sorter SilverStripe module powered by nice quicksand jquery plugin. 
+
+This is basic API and example of usage on SiteTree objects (sorting children of any page, filtering by "Pagetype" or Title's first letter). 
