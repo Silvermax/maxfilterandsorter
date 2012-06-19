@@ -12,7 +12,7 @@
 			// any filter/sorter selected before? use it...
 			if ($.cookie("filterClass") || $.cookie("sortClass")) {
 				var go = false;
-				if ($.cookie("filterClass") && $.cookie("filterClass") != "all") {
+				if ($.cookie("filterClass") && $.cookie("filterClass") != "all" && $.cookie("filterClass") != "xall") {
 					$('#MaxFilter a.active').removeClass('active');
 					$('#MaxFilter a.' + $.cookie("filterClass")).addClass('active');
 					go = true; 
@@ -37,8 +37,12 @@
 			    e.preventDefault();
 			 	
 					if (!$(this).hasClass("active")) {
-					 	$(this).siblings("a").removeClass("active");
-					 	$(this).addClass("active");
+					 	$("#MaxFilter a").removeClass("active");
+					 	if ($(this).hasClass("xall")) {
+					 		$("#MaxFilter a.all").addClass("active");
+					 	} else {
+					 		$(this).addClass("active");
+					 	}
 					    $.applyFilter();
 				    }	
 			});
