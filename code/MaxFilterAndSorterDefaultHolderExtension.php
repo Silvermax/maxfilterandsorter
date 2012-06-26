@@ -114,11 +114,13 @@ class MaxFilterAndSorterDefaultHolderExtension extends Extension {
 	 */
 	function onAfterInit() {
 		
-		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-		Requirements::javascript("maxfilterandsorter/javascript/jquery.cookie.js");
-		Requirements::javascript("maxfilterandsorter/javascript/quicksand.js");
-		Requirements::javascript("maxfilterandsorter/javascript/quicksand.sort.js");
-		Requirements::javascript("maxfilterandsorter/javascript/quicksand.init.js");
+		if ($this->owner->getMaxFilter()) {
+			Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
+			Requirements::javascript("maxfilterandsorter/javascript/jquery.cookie.js");
+			Requirements::javascript("maxfilterandsorter/javascript/quicksand.js");
+			Requirements::javascript("maxfilterandsorter/javascript/quicksand.sort.js");
+			Requirements::javascript("maxfilterandsorter/javascript/quicksand.init.js");
+		}
 		
 	}
 		
