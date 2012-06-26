@@ -22,15 +22,17 @@
 					$('#MaxSorter a.' + $.cookie("sortClass")).addClass('active');
 					go = true;
 				}
-				if (!$('#MaxSorter a.active').length > 0) {
-					$('#MaxSorter a:first').addClass("active")
-				}
-				if (!$('#MaxFilter a.active').length > 0) {
-					$('#MaxFilter a.all').addClass("active")
-				}
 				if (go) {
 					 $.applyFilter();
 				}
+			}
+			
+			// nothing active? make active default links
+			if (!$('#MaxSorter a.active').length > 0) {
+				$('#MaxSorter a:first').addClass("active")
+			}
+			if (!$('#MaxFilter a.active').length > 0) {
+				$('#MaxFilter a.all').addClass("active")
 			}
 			 
 			$("#MaxFilter a, #MaxSorter a").click(function(e) {
