@@ -29,7 +29,7 @@ class MaxFilterAndSorterDefaultHolderExtension extends Extension {
 	
 	function getMaxFilter() {
 		$items = $this->owner->getMaxFilterAndSorterDataList();
-		if ($items->exists()) {
+		if ($items) {
 			$map = array_keys($items->map($this->owner->getMaxFilterField()));
 			
 			if (count($map) > 1) {
